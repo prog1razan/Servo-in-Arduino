@@ -11,13 +11,13 @@ This Arduino program is designed to control six servo motors using six correspon
 ## ✨ Key Features
 - **Servo Control**: The program initializes an array of six servo objects, each associated with a specific digital pin.
 
-**Analog Input**: An array of analog input pins is defined to read the values from the potentiometers.
+- **Analog Input**: An array of analog input pins is defined to read the values from the potentiometers.
 
-**Setup Configuration**: In the setup function, each servo is attached to its respective pin, and the corresponding analog pin is set as an input.
+- **Setup Configuration**: In the setup function, each servo is attached to its respective pin, and the corresponding analog pin is set as an input.
 
-**Continuous Operation**: The loop function continuously reads the analog values from the potentiometers, maps these values to a range suitable for servo angles (0 to 180 degrees), and adjusts the servo positions accordingly.
+- **Continuous Operation**: The loop function continuously reads the analog values from the potentiometers, maps these values to a range suitable for servo angles (0 to 180 degrees), and adjusts the servo positions accordingly.
 
-**Efficient Code**: Using arrays and loops reduces the amount of code needed and makes it easier to manage multiple servos and potentiometers.
+- **Efficient Code**: Using arrays and loops reduces the amount of code needed and makes it easier to manage multiple servos and potentiometers.
 
 This program is ideal for projects involving multiple servo motors, such as robotic arms, animatronics, or any application requiring synchronized movement based on user input.
 
