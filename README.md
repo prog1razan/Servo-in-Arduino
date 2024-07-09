@@ -9,7 +9,7 @@
 This Arduino program is designed to control six servo motors using six corresponding potentiometers. By rotating the potentiometers, users can adjust the positions of the servos, which will move accordingly. The program utilizes arrays to manage multiple servo objects and their associated pins, simplifying the code and enhancing readability. The Servo library is included to provide the necessary functions for controlling the servo motors.
 
 ## ✨ Key Features
-**Servo Control**: The program initializes an array of six servo objects, each associated with a specific digital pin.
+- **Servo Control**: The program initializes an array of six servo objects, each associated with a specific digital pin.
 
 **Analog Input**: An array of analog input pins is defined to read the values from the potentiometers.
 
