@@ -1,35 +1,32 @@
-# TASK2 : Servo-in-Arduino
+# TASK2: Servo-in-Arduino
 
-## Table of Contents⚙️
+## Table of Contents
 - [Project Description](#project-description)
-- [Key Features](#key-features-)
+- [Key Features](#key-features)
 - [Technologies Used](#technologies-used)
 - [File Structure](#file-structure)
 
 ## Project Description📝
-This Arduino program is designed to control six servo motors using six corresponding potentiometers. By rotating the potentiometers, users can adjust the positions of the servos, which will move accordingly. The program utilizes arrays to manage multiple servo objects and their associated pins, simplifying the code and enhancing readability. The Servo library is included to provide the necessary functions for controlling the servo motors.
+This Arduino project is designed to control six servo motors using six corresponding potentiometers. By rotating the potentiometers, users can adjust the positions of the servos, which will move accordingly. The project is implemented using the Arduino IDE and utilizes the Servo library to provide the necessary functions for controlling the servo motors. The program makes use of arrays to manage multiple servo objects and their associated pins, simplifying the code and enhancing readability.
+
+This program is ideal for projects involving multiple servo motors, such as robotic arms, animatronics, or any application requiring synchronized movement based on user input. The design can be easily expanded to accommodate more servos and potentiometers if needed, making it a versatile solution for various DIY electronics and robotics projects.
 
 ## Key Features ✨
-- **Servo Control**: The program initializes an array of six servo objects, each associated with a specific digital pin.
-
-- **Analog Input**: An array of analog input pins is defined to read the values from the potentiometers.
-
-- **Setup Configuration**: In the setup function, each servo is attached to its respective pin, and the corresponding analog pin is set as an input.
-
-- **Continuous Operation**: The loop function continuously reads the analog values from the potentiometers, maps these values to a range suitable for servo angles (0 to 180 degrees), and adjusts the servo positions accordingly.
-
-- **Efficient Code**: Using arrays and loops reduces the amount of code needed and makes it easier to manage multiple servos and potentiometers.
-
-This program is ideal for projects involving multiple servo motors, such as robotic arms, animatronics, or any application requiring synchronized movement based on user input.
+- **Servo Control**: The program initializes an array of six servo objects, each associated with a specific digital pin, enabling individual control of each servo motor.
+- **Analog Input**: An array of analog input pins is defined to read the values from the potentiometers, allowing for real-time control of servo positions.
+- **Setup Configuration**: In the setup function, each servo is attached to its respective pin, and the corresponding analog pin is set as an input, ensuring proper initialization.
+- **Continuous Operation**: The loop function continuously reads the analog values from the potentiometers, maps these values to a range suitable for servo angles (0 to 180 degrees), and adjusts the servo positions accordingly, ensuring smooth and responsive control.
+- **Efficient Code**: Using arrays and loops reduces the amount of code needed and makes it easier to manage multiple servos and potentiometers, enhancing code readability and maintainability.
 
 ## Technologies Used 🔧
+- **Tinkercad**: A web-based platform for designing and simulating Arduino projects.
 
-- **Tinkercad**
+[Tinkercad Project Link](https://www.tinkercad.com/things/59HdNsQHZPX-6servo/editel?sharecode=t7gyHpfuC_p0DrUZI6CyVbk5uE302a-OWPY90WyetLs)
 
-https://www.tinkercad.com/things/59HdNsQHZPX-6servo/editel?sharecode=t7gyHpfuC_p0DrUZI6CyVbk5uE302a-OWPY90WyetLs
+### Code
 
-Code before:
-```
+**Before:**
+```cpp
 #include <Servo.h> // Include the servo library
 
 Servo myservo1; // Create a servo object for the first servo
@@ -101,10 +98,10 @@ void loop6() // Function to control the sixth servo
   potValue = map(potValue, 0, 1023, 0, 180); // Map the analog value to a range of 0 to 180 degrees
   myservo6.write(potValue); // Set the sixth servo to the mapped value
 }
+```
 
-```
-Code after:
-```
+**After:**
+```cpp
 #include <Servo.h>
 
 Servo servos[6]; // Array to hold 6 servo objects
@@ -129,19 +126,14 @@ void loop() {
 
   delay(15); // Delay to allow servos to reach position
 }
-
 ```
+
 ## File Structure 🏗️
-
 ```
-Servo in Arduino/
+Servo-in-Arduino/
 │
 ├── README.md
 ```
-
 - `README.md`: This file, containing information about the project.
 
-made with love by "she codes team "🤍😄
-raghad Alshammari - sadeem alresaini - razan alothaim.
-
-
+Made with love by the "She Codes" team 🤍😄: Raghad Alshammari, Sadeem Alresaini, Razan Alothaim.
